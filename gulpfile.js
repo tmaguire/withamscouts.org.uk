@@ -179,7 +179,7 @@ function getLiteJSModules() {
 var fileinclude = require('gulp-file-include')
 
 gulp.task('fileinclude', function() {
-  gulp.src(['dist/pages/index.html'])
+  gulp.src(['dist/pages/*.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: './dist/partials'
