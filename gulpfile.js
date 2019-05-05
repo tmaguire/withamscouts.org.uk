@@ -176,13 +176,15 @@ function getLiteJSModules() {
 }
 
 //HTML Includes
+var fileinclude = require('gulp-file-include')
+
 gulp.task('fileinclude', function() {
-  gulp.src(['dist/index.html'])
+  gulp.src(['dist/pages/index.html'])
     .pipe(fileinclude({
       prefix: '@@',
-      basepath: './dist'
+      basepath: './dist/partials'
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist'));
 });
 
 function defaultTask(cb) {
