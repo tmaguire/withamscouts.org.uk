@@ -1,20 +1,24 @@
 * {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Nunito Sans 400', sans-serif;
 }
 
 .navbar-brand {
-  font-family: 'Nunito Sans 800', sans-serif;
+  font-family: 'Nunito Sans 900', sans-serif;
 }
 
 h1 {
-  font-family: 'Nunito Sans 800', sans-serif;
+  font-family: 'Nunito Sans 900', sans-serif;
+}
+
+h2 {
+  font-family: 'Nunito Sans 900', sans-serif;
 }
 
 .scout-purple {
   background-color: #7413dc;
 }
 
-.scout-green {
+.scout-teal {
   background-color: #00a794;
 }
 

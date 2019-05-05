@@ -163,6 +163,7 @@ gulp.task('mdb-go', function () {
   gulp.watch('**/*', {
     cwd: './img/'
   }, ['img-compression']);
+  gulp.watch(['dist/pages/*.html', 'dist/partials/*.html'], ['fileinclude']);
 });
 
 function getJSModules() {
