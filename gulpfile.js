@@ -176,9 +176,6 @@ function getLiteJSModules() {
 }
 
 //HTML Includes
-var fileinclude = require('gulp-file-include'),
-  gulp = require('gulp');
-
 gulp.task('fileinclude', function() {
   gulp.src(['index.html'])
     .pipe(fileinclude({
