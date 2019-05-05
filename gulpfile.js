@@ -174,3 +174,16 @@ function getLiteJSModules() {
   delete require.cache[require.resolve('./js/modules.lite.js')];
   return require('./js/modules.lite.js');
 }
+
+//HTML Includes
+var fileinclude = require('gulp-file-include'),
+  gulp = require('gulp');
+
+gulp.task('fileinclude', function() {
+  gulp.src(['index.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: './dist'
+    }))
+    .pipe(gulp.dest('./'));
+});
