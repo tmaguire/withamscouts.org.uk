@@ -177,10 +177,16 @@ function getLiteJSModules() {
 
 //HTML Includes
 gulp.task('fileinclude', function() {
-  gulp.src(['index.html'])
+  gulp.src(['dist/index.html'])
     .pipe(fileinclude({
       prefix: '@@',
       basepath: './dist'
     }))
     .pipe(gulp.dest('./'));
 });
+
+function defaultTask(cb) {
+  cb();
+}
+
+exports.default = defaultTask
