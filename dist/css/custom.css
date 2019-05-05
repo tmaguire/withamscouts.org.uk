@@ -1,0 +1,49 @@
+* {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.navbar-brand {
+  font-family: 'Nunito Sans 800', sans-serif;
+}
+
+h1 {
+  font-family: 'Nunito Sans 800', sans-serif;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #7413DC !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #7413DC !important;
+  }
+}
+
+.scout-purple {
+  background-color: #7413dc;
+}
+
+.scout-green {
+  background-color: #00a794;
+}
+
+.nav-item a:hover {
+  color: #fff !important;
+}
+
+.nav-item a {
+  color: #f8f8f8 !important;
+}
+
+.scout-img {
+  width: 100%;
+  height: 100px;
+  object-fit: scale-down;
+}
