@@ -38,3 +38,39 @@ h2 {
   height: 100px;
   object-fit: scale-down;
 }
+
+.webp .home-1 {
+  background-image: url(../img/home/1.webp);
+}
+
+.no-webp .home-1 {
+  background-image: url(../img/home/1.png);
+}
+
+.no-js .home-1 {
+  background-image: url(../img/home/1.png);
+}
+
+.webp .home-2 {
+  background-image: url(../img/home/2.webp);
+}
+
+.no-webp .home-2 {
+  background-image: url(../img/home/2.png);
+}
+
+.no-js .home-2 {
+  background-image: url(../img/home/2.png);
+}
+
+.webp .home-3 {
+  background-image: url(../img/home/3.webp);
+}
+
+.no-webp .home-3 {
+  background-image: url(../img/home/3.png);
+}
+
+.no-js .home-3 {
+  background-image: url(../img/home/3.png);
+}
