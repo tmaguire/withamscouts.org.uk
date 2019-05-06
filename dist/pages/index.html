@@ -46,40 +46,47 @@
   <div class="container">
     <main>
       <section class="text-center my-5">
-        <img src="./img/logo/group.png" class="img-fluid" />
-        <h1 class="sr-only">Witham Scouts</h1>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-cascade wider">
-              <div class="view view-cascade overlay">
-                <img class="card-img-top" src="./img/logo/1st-witham-v.png" alt="Card image cap">
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
+
+        <picture>
+          <source srcset="./img/logo/group.webp" type="image/webp">
+          <source srcset="./img/logo/group.png" type="image/png">
+          <img src="./img/logo/group.png" class="img-fluid" alt="Witham Scouts logo">
+        </picture>
+
+        <div class="card-deck">
+
+          <div class="card card-image mb-4 hoverable" style="background-image: url(./img/home/1.png);">
+            <a href="./1st-witham">
+              <div class="text-white text-center d-flex align-items-center rgba-black-light py-5 px-4">
+                <div>
+                  <h1 class="card-title"><strong>1st Witham Scout Group</strong></h1>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="card card-image mb-4 hoverable" style="background-image: url(./img/home/3.png);">
+            <a href="./3rd-witham">
+            <div class="text-white text-center d-flex align-items-center rgba-black-light py-5 px-4">
+              <div>
+                <h1 class="card-title"><strong>3rd Witham Scout Group</strong></h1>
               </div>
             </div>
+          </a>
           </div>
-          <div class="col-md-4">
-            <div class="card card-cascade wider">
-              <div class="view view-cascade overlay">
-                <img class="card-img-top" src="./img/logo/3rd-witham-v.png" alt="Card image cap">
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
+
+          <div class="card card-image mb-4 hoverable" style="background-image: url(./img/home/2.png);">
+            <a href="./explorers">
+            <div class="text-white text-center d-flex align-items-center rgba-black-light py-5 px-4">
+              <div>
+                <h1 class="card-title"><strong>Witham Explorers</strong></h1>
               </div>
             </div>
+          </a>
           </div>
-          <div class="col-md-4">
-            <div class="card card-cascade wider">
-              <div class="view view-cascade overlay">
-                <img class="card-img-top" src="./img/logo/witham-esu.png" alt="Card image cap">
-                <a href="#!">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-            </div>
-          </div>
+
         </div>
+
       </section>
     </main>
   </div>
