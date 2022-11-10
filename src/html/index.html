@@ -197,6 +197,10 @@
 						</div>
 					</div>
 				</section>
+				<!-- Loop through each page -->
+				@@for (var i = 0; i < pages.length; i++) {
+					@@include('./src/includes/page.html',
+					`+(JSON.stringify(page[i]))+`) }
 				<!-- Open Source Licenses screen -->
 				<section
 					id="openSourceLicenses"

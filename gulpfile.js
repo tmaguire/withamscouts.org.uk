@@ -17,6 +17,7 @@ const sass = require('gulp-sass')(require('sass'));
 const {
 	marked
 } = require('marked');
+const pages = [{ page: '1st-witham' }, { page: '3rd-witham' }, { page: 'explorers' }, { page: 'volunteering' }];
 
 function licensePrep() {
 	const licenses = require('./thirdparty-licenses.json');
@@ -88,7 +89,8 @@ function sitePages() {
 				version,
 				licenses,
 				appName,
-				description
+				description,
+				pages
 			},
 			filters: {
 				markdown: marked.parse

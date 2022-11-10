@@ -69,7 +69,7 @@ window.onload = function () {
 			changePage('openSourceLicenses', 'Open Source Licenses');
 		})
 		.notFound(function () {
-			changePage('404', 'Page not found', false);
+			changePage('404', 'Page not found');
 		})
 		.resolve();
 };
