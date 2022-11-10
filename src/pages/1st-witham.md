@@ -1,7 +1,7 @@
 <picture>
 <source srcset="./img/logo/1st-witham.webp" type="image/webp">
 <source srcset="./img/logo/1st-witham.png" type="image/png">
-<img src="./img/logo/1st-witham.png" class="img-fluid" alt="1st Witham Scout Group logo">
+<img src="./img/logo/1st-witham.png" class="img-fluid" alt="1st Witham Scout Group logo" loading="lazy">
 </picture>
 <div class="row">
 <div class="col-sm-12">
@@ -9,7 +9,7 @@
 <p>Serving the community of Witham since 1910. The group currently operates during term time, three age groups at our own hall in the centre of town.</p>
 <p>Beavers 6 to 8 year olds; Fridays 1800 to 1930hrs</p>
 <p>Cubs 8 to 10 1/2 years old; Wednesdays 1800 to 1930hrs</p>
-<p>Scouts 10 1/2 to 14 year olds; Tuesdays 1900 to 2030hrs</p>
+<p>Scouts 10 1/2 to 14 year olds; Thursdays 1900 to 2030hrs</p>
 <p>Older Scouts at 14 year olds have the option to move on to Explorer Scouts, locally or else where in the district.</p>
 <p>At 14 years old members can also become Young Leaders assisting the section leaders at Beavers, Cubs, and Scouts. Many of these young leaders do this to gain experience and achievement towards their Duke of Edinburgh Award.</p>
 <p>All the sections plan their programs and activities along side the Scout Associations balances program criteria. Your young person will have a varied and exciting time joining the movement.</p>

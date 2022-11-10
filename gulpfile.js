@@ -17,7 +17,7 @@ const sass = require('gulp-sass')(require('sass'));
 const {
 	marked
 } = require('marked');
-const pages = [{ page: '1st-witham' }, { page: '3rd-witham' }, { page: 'explorers' }, { page: 'volunteering' }];
+const pages = require('./src/json/pages.json');
 
 function licensePrep() {
 	const licenses = require('./thirdparty-licenses.json');
@@ -70,7 +70,7 @@ function bundledCss() {
 
 function copyImg() {
 	return src([
-		'./src/img/*'
+		'./src/img/**/*'
 	])
 		.pipe(dest('dist/img/'));
 }
@@ -104,8 +104,8 @@ function sitePages() {
 		.pipe(dest('dist/'));
 }
 
-function copySite() {
-	return src('./src/site/*')
+function copyJson() {
+	return src('./src/json/*.json')
 		.pipe(dest('dist/'));
 }
 
@@ -118,5 +118,5 @@ function browserCompat() {
 		.pipe(dest('dist/js/'));
 }
 
-exports.default = parallel(series(parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copySite, browserCompat), sri));
-exports.dev = parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copySite, browserCompat);
+exports.default = parallel(series(parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copyJson, browserCompat), sri));
+exports.dev = parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copyJson, browserCompat);

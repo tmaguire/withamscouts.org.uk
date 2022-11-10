@@ -53,23 +53,24 @@ window.onload = function () {
 		.on('/home', function () {
 			changePage('home', 'Home');
 		})
-		.on('/1st-witham', function () {
-			changePage('1st-witham', '1st Witham Scout Group');
-		})
-		.on('/3rd-witham', function () {
-			changePage('3rd-witham', '3rd Witham Scout Group');
-		})
-		.on('/explorers', function () {
-			changePage('explorers', 'Witham Explorers');
-		})
-		.on('/volunteering', function () {
-			changePage('volunteering', 'Volunteering');
-		})
 		.on('/openSourceLicenses', function () {
 			changePage('openSourceLicenses', 'Open Source Licenses');
 		})
 		.notFound(function () {
 			changePage('404', 'Page not found');
+		});
+	fetch('./pages.json')
+		.then(response => response.json())
+		.then(pages => {
+			pages.forEach(page => {
+				router.on(`/${page.page}`, function () {
+					changePage(page.page, page.title);
+				});
+			});
+			router.resolve();
 		})
-		.resolve();
+		.catch(error => {
+			console.warn(error);
+			changePage('500', 'An error occurred');
+		});
 };

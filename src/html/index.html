@@ -118,6 +118,19 @@
 			</nav>
 			<!-- Main app layout -->
 			<main class="container mt-3" id="content">
+				<!-- Loading screen -->
+				<section class="row mx-auto">
+					<div class="col mx-auto">
+						<h1 class="my-4 text-center">Loading...</h1>
+						<div class="text-center">
+							<img
+								src="./img/loading.gif"
+								class="img-fluid text-center"
+								alt="Animated loading indicator"
+							/>
+						</div>
+					</div>
+				</section>
 				<!-- Home screen -->
 				<section
 					id="home"
@@ -129,69 +142,65 @@
 							<i class="bi bi-compass" aria-hidden="true"></i
 							>&nbsp;Welcome
 						</h1>
-						<div class="row home-tiles">
+						<div class="row gap-3">
 							<div class="col-12 col-md-6 col-lg-3">
 								<a
-									href="viewCaches"
-									class="btn btn-sq-lg btn-primary"
-									data-navigo
+									href="1st-witham"
+									class="card bg-dark text-white"
+									data-navigo=""
 								>
-									<i
-										class="bi bi-map home-icon"
-										aria-hidden="true"
-									></i>
-									<br />
-									<span class="home-caption"
-										>View caches</span
+									<img
+										src="./img/home/1.png"
+										class="card-img"
+										alt=""
+										loading="lazy"
+									/>
+									<div
+										class="card-img-overlay align-middle text-center"
 									>
+										<h2>1st Witham Scout Group</h2>
+										<h3>6 to 13 years</h3>
+									</div>
 								</a>
 							</div>
 							<div class="col-12 col-md-6 col-lg-3">
 								<a
-									href="foundCaches"
-									class="btn btn-sq-lg btn-primary"
-									data-navigo
+									href="3rd-witham"
+									class="card bg-dark text-white"
+									data-navigo=""
 								>
-									<i
-										class="bi bi-pin-map home-icon"
-										aria-hidden="true"
-									></i>
-									<br />
-									<span class="home-caption"
-										>Found caches</span
+									<img
+										src="./img/home/2.png"
+										class="card-img"
+										alt=""
+										loading="lazy"
+									/>
+									<div
+										class="card-img-overlay align-middle text-center"
 									>
+										<h2>3rd Witham Scout Group</h2>
+										<h3>6 to 10 years</h3>
+									</div>
 								</a>
 							</div>
 							<div class="col-12 col-md-6 col-lg-3">
 								<a
-									href="leaderboard"
-									class="btn btn-sq-lg btn-primary"
-									data-navigo
+									href="explorers"
+									class="card bg-dark text-white"
+									data-navigo=""
 								>
-									<i
-										class="bi bi-trophy home-icon"
-										aria-hidden="true"
-									></i>
-									<br />
-									<span class="home-caption"
-										>Leaderboard</span
+									<img
+										src="./img/home/3.png"
+										class="card-img"
+										alt=""
+										loading="lazy"
+									/>
+									<div
+										class="card-img-overlay align-middle text-center"
 									>
-								</a>
-							</div>
-							<div class="col-12 col-md-6 col-lg-3">
-								<a
-									href="about"
-									class="btn btn-sq-lg btn-primary"
-									data-navigo
-								>
-									<i
-										class="bi bi-info-circle home-icon"
-										aria-hidden="true"
-									></i>
-									<br />
-									<span class="home-caption"
-										>Find out more</span
-									>
+										<h2>Witham Explorers</h2>
+										<h3>14 to 18 years</h3>
+									</div>
 								</a>
 							</div>
 						</div>
@@ -199,8 +208,8 @@
 				</section>
 				<!-- Loop through each page -->
 				@@for (var i = 0; i < pages.length; i++) {
-					@@include('./src/includes/page.html',
-					`+(JSON.stringify(page[i]))+`) }
+				@@include('./src/includes/page.html',
+				`+(JSON.stringify(pages[i]))+`) }
 				<!-- Open Source Licenses screen -->
 				<section
 					id="openSourceLicenses"
@@ -243,6 +252,37 @@
 										class="btn btn-primary btn-lg px-4 gap-3"
 										href="https://withamscouts.org.uk"
 										>Go home</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Error screen -->
+				<section id="500" class="row mx-auto d-none" aria-hidden="true">
+					<div class="container">
+						<div class="p-3 text-center">
+							<i
+								class="bi bi-bug home-icon d-block mx-auto mb-4"
+								aria-hidden="true"
+								role="img"
+							></i>
+							<h1 class="display-5 fw-bold">
+								An error has occurred
+							</h1>
+							<div class="col-lg-6 mx-auto">
+								<p class="lead mb-4">
+									We weren't able to load the pages for this
+									website properly - please ensure you have
+									enabled JavaScript in your web browser.
+								</p>
+								<div
+									class="d-grid gap-2 d-sm-flex justify-content-sm-center"
+								>
+									<a
+										class="btn btn-primary btn-lg px-4 gap-3"
+										href="mailto:tom@firstwithamscouts.org.uk?Subject=[withamscouts.org.uk] Website fault"
+										>Report a problem</a
 									>
 								</div>
 							</div>

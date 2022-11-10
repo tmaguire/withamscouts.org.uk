@@ -63,53 +63,6 @@ body {
 	border-width: 0 !important;
 }
 
-.btn-placeholder {
-	width: 90px !important;
-}
-
-.message-area {
-	height: 100px !important;
-}
-
-.legend {
-	font-size: var(--bs-body-font-size) !important;
-}
-
-.btn-sq-lg {
-	width: 100% !important;
-	height: 185px !important;
-	padding: 10px;
-	margin: 5px;
-}
-
-.home-icon {
-	padding: 5px;
-	margin-top: 10px;
-	font-size: 80px;
-}
-
-.home-caption {
-	font-size: 20px;
-	text-overflow: ellipsis;
-}
-
-.hidden {
-	display: none;
-}
-
-.home-tiles {
-	margin-left: auto !important;
-	margin-right: auto !important;
-}
-
-#mainMap {
-	height: 500px;
-}
-
-.mapImg {
-	height: 400px;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
@@ -145,23 +98,4 @@ input[type=number]::-webkit-outer-spin-button {
 
 .logo-img {
 	max-width: 200px;
-}
-
-.gold {
-	background-color: $yellow-500 !important;
-	color: #000;
-}
-
-.silver {
-	background-color: $gray-500 !important;
-	color: #000;
-}
-
-.bronze {
-	background-color: $orange-600 !important;
-	color: #000;
-}
-
-.your-device {
-	border: 3px solid $secondary !important;
 }
