@@ -1,0 +1,15 @@
+[[headers]]
+for = "*"
+[headers.values]
+Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' data: blob:; font-src 'self' data:; manifest-src 'self';"
+Expect-CT = "max-age=86400, enforce"
+Permissions-Policy = "accelerometer=(), autoplay=(), camera=(), cross-origin-isolated=(), document-domain=(), encrypted-media=(self), fullscreen=(), geolocation=(self), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), sync-xhr=(), usb=(), web-share=(), xr-spatial-tracking=()"
+Referrer-Policy = "same-origin"
+Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "0"
+[[redirects]]
+from = "/*"
+status = 200
+to = "/index.html"

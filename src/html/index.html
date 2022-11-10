@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+		<meta charset="utf-8" />
+		<title>@@appName</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="description" content="@@description" />
+		<meta name="author" content="Tom Maguire (1st Witham Scouts)" />
+		<!-- Bundled CSS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="./css/bundle-@@version.min.css"
+		/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
+		<link rel="icon" sizes="192x192" href="./img/icon.png" />
+		<link rel="apple-touch-icon" href="ios-icon.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="./img/touch-icon-ipad.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="./img/touch-icon-iphone-retina.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="./img/touch-icon-ipad-retina.png"
+		/>
+		<link rel="canonical" href="https://withamscouts.org.uk" />
+		<!-- Theme colour -->
+		<meta name="theme-color" content="#7413DC" />
+	</head>
+
+	<body>
+		<div id="app">
+			<a href="#content" class="visually-hidden-focusable"
+				>Skip to main content</a
+			>
+			<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+				<div class="container-fluid">
+					<a href="/" class="navbar-brand" data-navigo>
+						<picture>
+							<source
+								srcset="./img/logo/logo-w.webp"
+								type="image/webp"
+							/>
+							<img
+								src="./img/logo/logo-w.png"
+								height="30"
+								width="33"
+								class="d-inline-block align-top"
+								alt="Scouting fleur-de-lis logo"
+							/>
+						</picture>
+						<span class="ms-1 d-inline">@@appName</span>
+					</a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarToggler"
+						aria-controls="navbarToggler"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarToggler">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="home" data-navigo
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="1st-witham"
+									data-navigo
+									>1st Witham Scouts</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="3rd-witham"
+									data-navigo
+									>3rd Witham Scouts</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="explorers" data-navigo
+									>Witham Explorers</a
+								>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link"
+									href="volunteering"
+									data-navigo
+									>Volunteering</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- Main app layout -->
+			<main class="container mt-3" id="content">
+				<!-- Home screen -->
+				<section
+					id="home"
+					class="row mx-auto d-none"
+					aria-hidden="true"
+				>
+					<div class="col mx-auto">
+						<h1 class="my-4 text-center">
+							<i class="bi bi-compass" aria-hidden="true"></i
+							>&nbsp;Welcome
+						</h1>
+						<div class="row home-tiles">
+							<div class="col-12 col-md-6 col-lg-3">
+								<a
+									href="viewCaches"
+									class="btn btn-sq-lg btn-primary"
+									data-navigo
+								>
+									<i
+										class="bi bi-map home-icon"
+										aria-hidden="true"
+									></i>
+									<br />
+									<span class="home-caption"
+										>View caches</span
+									>
+								</a>
+							</div>
+							<div class="col-12 col-md-6 col-lg-3">
+								<a
+									href="foundCaches"
+									class="btn btn-sq-lg btn-primary"
+									data-navigo
+								>
+									<i
+										class="bi bi-pin-map home-icon"
+										aria-hidden="true"
+									></i>
+									<br />
+									<span class="home-caption"
+										>Found caches</span
+									>
+								</a>
+							</div>
+							<div class="col-12 col-md-6 col-lg-3">
+								<a
+									href="leaderboard"
+									class="btn btn-sq-lg btn-primary"
+									data-navigo
+								>
+									<i
+										class="bi bi-trophy home-icon"
+										aria-hidden="true"
+									></i>
+									<br />
+									<span class="home-caption"
+										>Leaderboard</span
+									>
+								</a>
+							</div>
+							<div class="col-12 col-md-6 col-lg-3">
+								<a
+									href="about"
+									class="btn btn-sq-lg btn-primary"
+									data-navigo
+								>
+									<i
+										class="bi bi-info-circle home-icon"
+										aria-hidden="true"
+									></i>
+									<br />
+									<span class="home-caption"
+										>Find out more</span
+									>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Open Source Licenses screen -->
+				<section
+					id="openSourceLicenses"
+					class="row mx-auto d-none"
+					aria-hidden="true"
+				>
+					<div class="col mx-auto">
+						<h1 class="my-4 text-center">
+							<i class="bi bi-file-text" aria-hidden="true"></i
+							>&nbsp;Open Source Licenses
+						</h1>
+						<p>
+							The @@appName website (v@@version) is built using
+							the following open source libraries:
+						</p>
+						@@for (var i = 0; i < licenses.length; i++) {
+						@@include('./src/includes/license.html',
+						`+(JSON.stringify(licenses[i]))+`) }
+					</div>
+				</section>
+				<!-- Not found screen -->
+				<section id="404" class="row mx-auto d-none" aria-hidden="true">
+					<div class="container">
+						<div class="p-3 text-center">
+							<i
+								class="bi bi-bug home-icon d-block mx-auto mb-4"
+								aria-hidden="true"
+								role="img"
+							></i>
+							<h1 class="display-5 fw-bold">Page not found</h1>
+							<div class="col-lg-6 mx-auto">
+								<p class="lead mb-4">
+									The page or link you're trying to get to
+									doesn't exist.
+								</p>
+								<div
+									class="d-grid gap-2 d-sm-flex justify-content-sm-center"
+								>
+									<a
+										class="btn btn-primary btn-lg px-4 gap-3"
+										href="https://withamscouts.org.uk"
+										>Go home</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<!-- Page footer -->
+			<footer class="container my-5 text-muted border-top">
+				<div class="row pt-3">
+					<div class="col-md-10">
+						<p>
+							@@appName | All content &copy;
+							<a href="https://www.scouts.org.uk/"
+								>The Scout Association</a
+							>. All Rights Reserved.
+						</p>
+						<p>
+							<a href="openSourceLicenses" data-navigo
+								>Open Source Licenses</a
+							>
+							|
+							<a
+								href="https://www.scouts.org.uk/about-us/strategy/"
+								>#SkillsForLife</a
+							>
+						</p>
+					</div>
+					<div class="col-md-2 text-center">
+						<a href="https://withamscouts.org.uk">
+							<picture>
+								<source
+									srcset="./img/logo/group.webp"
+									type="image/webp"
+								/>
+								<source
+									srcset="./img/logo/group.png"
+									type="image/png"
+								/>
+								<img
+									src="./img/logo/group.png"
+									class="footer-img"
+									alt="Witham Scouts logo"
+									loading="lazy"
+									height="100"
+									width="110"
+								/>
+							</picture>
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="./js/browser-compat-@@version.min.js"></script>
+		<script src="./js/main-@@version.min.js"></script>
+	</body>
+</html>

@@ -1,195 +1,120 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const cssmin = require('gulp-cssmin');
-const browserSync = require('browser-sync').create();
+/* jshint esversion:8 */
+const {
+	src,
+	dest,
+	parallel,
+	series
+} = require('gulp');
+const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const minify = require('gulp-minify');
-const rename = require('gulp-rename');
-const imagemin = require('gulp-imagemin');
-const fs = require('fs');
+const fileInclude = require('gulp-file-include');
+const sriHash = require('gulp-sri-hash');
+const htmlmin = require('gulp-html-minifier-terser');
+const version = require('./package.json').version;
+const appName = require('./package.json').appName;
+const description = require('./package.json').description;
+const sass = require('gulp-sass')(require('sass'));
+const {
+	marked
+} = require('marked');
 
-const cssAddonsPath = './css/modules/';
+function licensePrep() {
+	const licenses = require('./thirdparty-licenses.json');
+	const array = [];
+	Object.keys(licenses).forEach(key => {
+		const license = licenses[key];
+		array.push({
+			name: license.name,
+			version: license.version,
+			repo: license.repository,
+			license: license.licenseText
+		});
+	});
+	return array;
+}
+const licenses = licensePrep();
 
-// CSS Tasks
-gulp.task('css-compile', function () {
-  gulp.src('scss/*.scss')
-    .pipe(sass({
-      outputStyle: 'nested'
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 10 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest('./dist/css/'));
-
-  gulp.start('css-compile-modules');
-});
-
-// CSS Tasks
-gulp.task('css-compile-modules', function () {
-  gulp.src('scss/**/modules/**/*.scss')
-    .pipe(sass({
-      outputStyle: 'nested'
-    }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 10 versions'],
-      cascade: false
-    }))
-    .pipe(rename({
-      dirname: cssAddonsPath
-    }))
-    .pipe(gulp.dest('./dist/'));
-});
-
-
-gulp.task('css-minify', function () {
-  gulp.src(['./dist/css/*.css', '!./dist/css/*.min.css', '!./dist/css/bootstrap.css'])
-    .pipe(cssmin())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./dist/css'));
-
-  gulp.start('css-minify-modules');
-});
-
-gulp.task('css-minify-modules', function () {
-  gulp.src(['./dist/css/modules/*.css', '!./dist/css/modules/*.min.css'])
-    .pipe(cssmin())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./dist/css/modules'));
-});
-
-// JavaScript Tasks
-gulp.task('js-build', function () {
-
-  const plugins = getJSModules();
-
-  gulp.src(plugins.modules)
-    .pipe(concat('mdb.js'))
-    .pipe(gulp.dest('./dist/js/'));
-
-  gulp.start('js-lite-build');
-});
-
-gulp.task('js-lite-build', function () {
-
-  const pluginsLite = getLiteJSModules();
-
-  gulp.src(pluginsLite.modules)
-    .pipe(concat('mdb.lite.js'))
-    .pipe(gulp.dest('./dist/js/'));
-
-  gulp.start('js-lite-minify');
-
-});
-
-gulp.task('js-minify', function () {
-  gulp.src(['./dist/js/mdb.js'])
-    .pipe(minify({
-      ext: {
-        // src:'.js',
-        min: '.min.js'
-      },
-      noSource: true,
-    }))
-    .pipe(gulp.dest('./dist/js'));
-});
-
-
-gulp.task('js-lite-minify', function () {
-  gulp.src(['./dist/js/mdb.lite.js'])
-    .pipe(minify({
-      ext: {
-        // src:'.js',
-        min: '.min.js'
-      },
-      noSource: true,
-    }))
-    .pipe(gulp.dest('./dist/js'));
-});
-
-// Image Compression
-gulp.task('img-compression', function () {
-  gulp.src('./img/*')
-    .pipe(imagemin([
-      imagemin.gifsicle({
-        interlaced: true
-      }),
-      imagemin.jpegtran({
-        progressive: true
-      }),
-      imagemin.optipng({
-        optimizationLevel: 5
-      }),
-      imagemin.svgo({
-        plugins: [{
-            removeViewBox: true
-          },
-          {
-            cleanupIDs: false
-          }
-        ]
-      })
-    ]))
-    .pipe(gulp.dest('./dist/img'));
-});
-
-// Live Server
-gulp.task('live-server', function () {
-  browserSync.init({
-    server: {
-      baseDir: './dist',
-      directory: true
-    },
-    notify: false
-  });
-
-  gulp.watch('**/*', {
-    cwd: './dist/'
-  }, browserSync.reload);
-});
-
-// Watch on everything
-gulp.task('mdb-go', function () {
-  gulp.start('live-server');
-  gulp.watch('scss/**/*.scss', ['css-compile']);
-  gulp.watch(['dist/css/*.css', '!dist/css/*.min.css'], ['css-minify']);
-  gulp.watch('js/**/*.js', ['js-build']);
-  gulp.watch(['dist/js/*.js', '!dist/js/*.min.js'], ['js-minify']);
-  gulp.watch('**/*', {
-    cwd: './img/'
-  }, ['img-compression']);
-  gulp.watch(['dist/pages/*.html', 'dist/partials/*.html'], ['fileinclude']);
-});
-
-function getJSModules() {
-  delete require.cache[require.resolve('./js/modules.js')];
-  return require('./js/modules');
+function sri() {
+	return src('dist/*.html')
+		.pipe(sriHash({
+			algo: 'sha512',
+			relative: true
+		}))
+		.pipe(dest('dist/'));
 }
 
-function getLiteJSModules() {
-  delete require.cache[require.resolve('./js/modules.lite.js')];
-  return require('./js/modules.lite.js');
+function bundledJs() {
+	return src([
+		'./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+		'./node_modules/navigo/lib/navigo.min.js',
+		'./src/js/script.min.js'
+	])
+		.pipe(concat(`main-${version}.min.js`))
+		.pipe(uglify())
+		.pipe(dest('dist/js/'));
 }
 
-//HTML Includes
-var fileinclude = require('gulp-file-include')
-
-gulp.task('fileinclude', function() {
-  gulp.src(['dist/pages/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: './dist/partials'
-    }))
-    .pipe(gulp.dest('./dist'));
-});
-
-function defaultTask(cb) {
-  cb();
+function bundledCss() {
+	return src([
+		'./src/css/style.scss',
+		'./node_modules/bootstrap-icons/font/bootstrap-icons.scss',
+		'./node_modules/outdated-browser-rework/dist/style.css'
+	])
+		.pipe(concat(`bundle-${version}.min.css`))
+		.pipe(sass.sync({
+			outputStyle: 'compressed'
+		}).on('error', sass.logError))
+		.pipe(dest('dist/css/'));
 }
 
-exports.default = defaultTask
+function copyImg() {
+	return src([
+		'./src/img/*'
+	])
+		.pipe(dest('dist/img/'));
+}
+
+function copyIcons() {
+	return src('./node_modules/bootstrap-icons/font/fonts/*')
+		.pipe(dest('dist/css/fonts/'));
+}
+
+function sitePages() {
+	return src('./src/html/*.html')
+		.pipe(fileInclude({
+			prefix: '@@',
+			basepath: '@root',
+			context: {
+				version,
+				licenses,
+				appName,
+				description
+			},
+			filters: {
+				markdown: marked.parse
+			}
+		}))
+		.pipe(htmlmin({
+			collapseWhitespace: true,
+			removeComments: true,
+			continueOnParseError: true
+		}))
+		.pipe(dest('dist/'));
+}
+
+function copySite() {
+	return src('./src/site/*')
+		.pipe(dest('dist/'));
+}
+
+function browserCompat() {
+	return src([
+		'./node_modules/outdated-browser-rework/dist/outdated-browser-rework.min.js',
+		'./src/js/browser-compat.min.js'
+	])
+		.pipe(concat(`browser-compat-${version}.min.js`))
+		.pipe(dest('dist/js/'));
+}
+
+exports.default = parallel(series(parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copySite, browserCompat), sri));
+exports.dev = parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copySite, browserCompat);
