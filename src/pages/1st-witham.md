@@ -1,7 +1,7 @@
 <picture>
 <source srcset="./img/logo/1st-witham.webp" type="image/webp">
 <source srcset="./img/logo/1st-witham.png" type="image/png">
-<img src="./img/logo/1st-witham.png" class="img-fluid" alt="1st Witham Scout Group logo" loading="lazy">
+<img src="./img/logo/1st-witham.png" class="img-fluid logo-img" alt="1st Witham Scout Group logo" loading="lazy">
 </picture>
 <div class="row">
 <div class="col-sm-12">

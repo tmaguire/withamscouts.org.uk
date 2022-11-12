@@ -18,12 +18,12 @@ function changePage(page, title) {
 	// Hide all pages (except selected)
 	document.querySelectorAll('section').forEach(section => {
 		if (section.id !== page) {
-			section.setAttribute('class', 'row mx-auto d-none');
+			section.classList.add('d-none');
 			section.setAttribute('aria-hidden', 'true');
 		}
 	});
 	// Set page as active
-	document.getElementById(page).setAttribute('class', 'row mx-auto');
+	document.getElementById(page).classList.remove('d-none');
 	document.getElementById(page).removeAttribute('aria-hidden');
 	// Change document title
 	document.title = `${title} | Witham Scouts`;
