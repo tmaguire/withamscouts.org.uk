@@ -20,7 +20,7 @@
 	"homepage": "https://github.com/tmaguire/withamscouts.org.uk#readme",
 	"dependencies": {
 		"@popperjs/core": "^2.11.6",
-		"bootstrap": "^5.2.2",
+		"bootstrap": "^5.2.3",
 		"bootstrap-icons": "^1.10.2",
 		"navigo": "^8.11.1",
 		"outdated-browser-rework": "^3.0.1"
