@@ -29,7 +29,7 @@
 		"gulp": "^4.0.2",
 		"gulp-concat": "^2.6.1",
 		"gulp-file-include": "^2.3.0",
-		"gulp-html-minifier-terser": "^6.0.1",
+		"gulp-html-minifier-terser": "^7.1.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-sri-hash": "^2.2.1",
 		"gulp-uglify": "^3.0.2",
