@@ -10,9 +10,11 @@ const concat = require('gulp-concat');
 const fileInclude = require('gulp-file-include');
 const sriHash = require('gulp-sri-hash');
 const htmlmin = require('gulp-html-minifier-terser');
-const version = require('./package.json').version;
-const appName = require('./package.json').appName;
-const description = require('./package.json').description;
+const {
+	version,
+	appName,
+	description
+} = require('./package.json');
 const sass = require('gulp-sass')(require('sass'));
 const {
 	marked
