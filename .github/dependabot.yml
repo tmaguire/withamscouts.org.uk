@@ -9,3 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+      time: "09:00"
+    commit-message:
+      prefix: "[skip netlify]"
+      include: "scope"
