@@ -1,7 +1,7 @@
 {
 	"name": "withamscouts",
 	"appName": "Witham Scouts",
-	"version": "3.0.3",
+	"version": "3.0.4",
 	"description": "Website for the Witham Scout groups",
 	"scripts": {
 		"build": "npm run license-check && gulp",
