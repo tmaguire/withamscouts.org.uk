@@ -10,6 +10,12 @@ Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 X-Content-Type-Options = "nosniff"
 X-Frame-Options = "DENY"
 X-XSS-Protection = "0"
+# URL shortners
+[[redirects]]
+from = "/3rd-waiting-list"
+status = 302
+to = "https://www.onlinescoutmanager.co.uk/waiting-list/3rd-witham-3rd-witham-waiting-list/e2693ec5-8323-4dd0-98ac-9b77c22b1fb5/apply"
+# App proxy
 [[redirects]]
 from = "/*"
 status = 200

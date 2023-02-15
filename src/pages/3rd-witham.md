@@ -26,5 +26,6 @@ The group only survives through charitable donations, grants, and fundraising, h
 ensuring funds are available for equipment, building maintenance, and that the grounds and building are clean and safe for the young people. Help from more parents is always needed. Please contact <a
 href="mailto:3rd@withamscouts.org.uk">3rd@withamscouts.org.uk</a> to volunteer
 your professional or general support and time.</p>
+<a href="https://withamscouts.org.uk/3rd-waiting-list" class="btn btn-primary my-3">3rd Witham Scouts Waiting List</a>
 </div>
 </div>
