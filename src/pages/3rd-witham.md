@@ -8,10 +8,10 @@
 <p>3rd Witham (St Nicholas) Scout group is open to boys and girls aged between 6 and 10 regardless of faith.</p>
 <p>We have a historical affiliation to St Nicolas Church, and while we still link with them this does not exclude those of non Christian faith or those without a religion from joining the scout group.</p>
 <p>We are located at our own hall we share with GirlguidingUK adjacent to Spring Lodge Community Centre on Powers Hall Road.</p>
-<p>We operate 2 age groups and have strong links to the local Witham Explorer Scout Unit.</p>
+<p>We operate 3 age groups and have strong links to the local Witham Explorer Scout Unit.</p>
 <p>Beavers 6 to 8 year olds; Tuesdays 1800 to 1930hrs</p>
-<p>Cubs 8 to 10 1/2 years old; Monday 1830 to 2000hrs</p>
-<p>Scouts 10 1/2 to 14 year olds; Currently closed.</p>
+<p>Cubs 8 to 10 1/2 years old; Mondays 1830 to 2000hrs</p>
+<p>Scouts 10 1/2 to 14 year olds; Fridays 1900 to 2030hrs</p>
 <p>At 14 young people have the options to move on to Explorers and become young leaders.</p>
 <p>We follow the Scout Association guidelines for a balanced program, meaning one week your young person could be pitching a tent, and the next week learning about the history of our town. Your young person may experience any of the
 following, climbing, community volunteering, swimming gala, kayaking, pioneering, axe saw and knife training, fire station visit, zip line, sweet making, remembrance parade, blind sandwich making, orienteering, home help skills, shelter
