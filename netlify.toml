@@ -15,6 +15,10 @@ X-XSS-Protection = "0"
 from = "/3rd-waiting-list"
 status = 302
 to = "https://www.onlinescoutmanager.co.uk/waiting-list/3rd-witham-3rd-witham-waiting-list/e2693ec5-8323-4dd0-98ac-9b77c22b1fb5/apply"
+[[redirects]]
+from = "/uniform"
+status = 302
+to = "https://shop.scouts.org.uk/journal/2022/06/20/badge-placement-2"
 # App proxy
 [[redirects]]
 from = "/*"
