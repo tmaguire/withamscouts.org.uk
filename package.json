@@ -35,6 +35,6 @@
 		"gulp-uglify": "^3.0.2",
 		"license-checker-rseidelsohn": "^4.2.0",
 		"marked": "^4.3.0",
-		"sass": "^1.60.0"
+		"sass": "^1.61.0"
 	}
 }
