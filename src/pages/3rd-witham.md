@@ -13,7 +13,7 @@
 <p>Beavers 6 to 8 year olds; Tuesdays 1800 to 1930hrs</p>
 <p>Cubs 8 to 10 1/2 years old; Mondays 1830 to 2000hrs</p>
 <p>Scouts 10 1/2 to 14 year olds; Fridays 1900 to 2030hrs</p>
-<p>At 14 young people have the options to move on to Explorers and become young leaders.</p>
+<p>At 14 young people have the options to move on to <a href="explorers" data-navigo="true">Explorers</a> and can become young leaders.</p>
 <p>We follow the Scout Association guidelines for a balanced program, meaning one week your young person could be pitching a tent, and the next week learning about the history of our town. Your young person may experience any of the
 following, climbing, community volunteering, swimming gala, kayaking, pioneering, axe saw and knife training, fire station visit, zip line, sweet making, remembrance parade, blind sandwich making, orienteering, home help skills, shelter
 building, survival skills, dementia awareness, backwards cooking, caving, circus skills, craft, team sports, games, surfing, DIY skills, fundraising, hiking, map reading and navigation, communication skills, international friendship,

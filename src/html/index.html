@@ -1,259 +1,129 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-	<head>
-		<meta charset="utf-8" />
-		<title>@@appName</title>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<meta name="description" content="@@description" />
-		<meta name="author" content="Tom Maguire (1st Witham Scouts)" />
-		<!-- Bundled CSS -->
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="./css/bundle-@@version.min.css"
-		/>
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta
-			name="apple-mobile-web-app-status-bar-style"
-			content="black-translucent"
-		/>
-		<link rel="icon" sizes="192x192" href="./img/icon.png" />
-		<link
-			rel="apple-touch-icon"
-			sizes="76x76"
-			href="./img/touch-icon-ipad.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="120x120"
-			href="./img/touch-icon-iphone-retina.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="152x152"
-			href="./img/touch-icon-ipad-retina.png"
-		/>
-		<link rel="canonical" href="https://withamscouts.org.uk" />
-		<!-- Theme colour -->
-		<meta name="theme-color" content="#7413DC" />
-	</head>
 
-	<body>
-		<div id="app">
-			<a href="#content" class="visually-hidden-focusable"
-				>Skip to main content</a
-			>
-			<nav class="navbar navbar-expand-md navbar-dark bg-primary">
-				<div class="container-fluid">
-					<a href="/" class="navbar-brand" data-navigo>
-						<picture>
-							<source
-								srcset="./img/logo/logo-w.webp"
-								type="image/webp"
-							/>
-							<img
-								src="./img/logo/logo-w.png"
-								height="30"
-								width="33"
-								class="d-inline-block align-top"
-								alt="Scouting fleur-de-lis logo"
-							/>
-						</picture>
-						<span class="ms-1 d-inline">@@appName</span>
-					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarToggler"
-						aria-controls="navbarToggler"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarToggler">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link" href="home" data-navigo
-									>Home</a
-								>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link"
-									href="1st-witham"
-									data-navigo
-									>1st Witham Scouts</a
-								>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link"
-									href="3rd-witham"
-									data-navigo
-									>3rd Witham Scouts</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="explorers" data-navigo
-									>Witham Explorers</a
-								>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link"
-									href="volunteering"
-									data-navigo
-									>Volunteering</a
-								>
-							</li>
-						</ul>
+<head>
+	<meta charset="utf-8" />
+	<title>@@appName</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="@@description" />
+	<meta name="author" content="@@author" />
+	<!-- Bundled CSS -->
+	<link rel="stylesheet" type="text/css" href="./css/bundle-@@version.min.css" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<link rel="icon" sizes="192x192" href="./img/icon.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="./img/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="./img/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="./img/touch-icon-ipad-retina.png" />
+	<link rel="canonical" href="@@appUrl" />
+	<!-- Theme colour -->
+	<meta name="theme-color" content="#7413DC" />
+</head>
+
+<body>
+	<div id="app">
+		<a href="#content" class="visually-hidden-focusable">Skip to main content</a>
+		<nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4">
+			<div class="container-fluid">
+				<a href="/" class="navbar-brand" data-navigo="true">
+					<picture>
+						<source srcset="./img/logo/logo-w.webp" type="image/webp" />
+						<img src="./img/logo/logo-w.png" height="30" width="33" class="d-inline-block align-top"
+							alt="Scouting fleur-de-lis logo" />
+					</picture>
+					<span class="ms-1 d-inline">@@appName</span>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
+					aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarToggler">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link" href="home" data-navigo="true">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="1st-witham" data-navigo="true">1st Witham Scouts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="3rd-witham" data-navigo="true">3rd Witham Scouts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="explorers" data-navigo="true">Witham Explorers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="volunteering" data-navigo="true">Volunteering</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- Main app layout -->
+		<main class="container" id="content">
+			<!-- Loading screen -->
+			<section class="row mx-auto">
+				<div class="col mx-auto">
+					<h1 class="my-4 text-center visually-hidden">
+						Loading...
+					</h1>
+					<div class="text-center">
+						<img src="./img/loading.gif" class="img-fluid text-center" alt="Animated loading indicator" />
 					</div>
 				</div>
-			</nav>
-			<!-- Main app layout -->
-			<main class="container mt-3" id="content">
-				<!-- Loading screen -->
-				<section class="row mx-auto">
-					<div class="col mx-auto">
-						<h1 class="my-4 text-center visually-hidden">
-							Loading...
-						</h1>
-						<div class="text-center">
-							<img
-								src="./img/loading.gif"
-								class="img-fluid text-center"
-								alt="Animated loading indicator"
-							/>
+			</section>
+			<!-- Home screen -->
+			<section id="home" class="row mx-auto d-none" aria-hidden="true">
+				<div class="col mx-auto">
+					<h1 class="my-4 text-center">
+						<i class="bi bi-compass" aria-hidden="true"></i>&nbsp;Welcome
+					</h1>
+					<div class="row">
+						<div class="col-12 col-md-6 col-lg-4 mb-3">
+							<a href="1st-witham" class="card bg-dark text-white home-img shadow" data-navigo="true">
+								<img src="./img/home/1.png" class="card-img" alt="" loading="lazy" />
+								<div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+									<h2>1st Witham Scout Group</h2>
+									<h3>6 to 14 years</h3>
+								</div>
+							</a>
+						</div>
+						<div class="col-12 col-md-6 col-lg-4 mb-3">
+							<a href="3rd-witham" class="card bg-dark text-white home-img shadow" data-navigo="true">
+								<img src="./img/home/2.png" class="card-img" alt="" loading="lazy" />
+								<div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+									<h2>3rd Witham Scout Group</h2>
+									<h3>4 to 14 years</h3>
+								</div>
+							</a>
+						</div>
+						<div class="col-12 col-md-12 col-lg-4 mb-3">
+							<a href="explorers" class="card bg-dark text-white home-img shadow" data-navigo="true">
+								<img src="./img/home/3.png" class="card-img" alt="" loading="lazy" />
+								<div class="card-img-overlay text-center d-flex flex-column justify-content-center">
+									<h2>Witham Explorers</h2>
+									<h3>14 to 18 years</h3>
+								</div>
+							</a>
 						</div>
 					</div>
-				</section>
-				<!-- Home screen -->
-				<section
-					id="home"
-					class="row mx-auto d-none"
-					aria-hidden="true"
-				>
-					<div class="col mx-auto">
-						<h1 class="my-4 text-center">
-							<i class="bi bi-compass" aria-hidden="true"></i
-							>&nbsp;Welcome
-						</h1>
-						<div class="row">
-							<div class="col-12 col-md-6 col-lg-4 mb-3">
-								<a
-									href="1st-witham"
-									class="card bg-dark text-white"
-									data-navigo=""
-								>
-									<img
-										src="./img/home/1.png"
-										class="card-img"
-										alt=""
-										loading="lazy"
-									/>
-									<div
-										class="card-img-overlay text-center d-flex flex-column justify-content-center"
-									>
-										<h2>1st Witham Scout Group</h2>
-										<h3>6 to 14 years</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-12 col-md-6 col-lg-4 mb-3">
-								<a
-									href="3rd-witham"
-									class="card bg-dark text-white"
-									data-navigo=""
-								>
-									<img
-										src="./img/home/2.png"
-										class="card-img"
-										alt=""
-										loading="lazy"
-									/>
-									<div
-										class="card-img-overlay text-center d-flex flex-column justify-content-center"
-									>
-										<h2>3rd Witham Scout Group</h2>
-										<h3>4 to 14 years</h3>
-									</div>
-								</a>
-							</div>
-							<div class="col-12 col-md-12 col-lg-4 mb-3">
-								<a
-									href="explorers"
-									class="card bg-dark text-white"
-									data-navigo=""
-								>
-									<img
-										src="./img/home/3.png"
-										class="card-img"
-										alt=""
-										loading="lazy"
-									/>
-									<div
-										class="card-img-overlay text-center d-flex flex-column justify-content-center"
-									>
-										<h2>Witham Explorers</h2>
-										<h3>14 to 18 years</h3>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Loop through each page -->
-				@@for (var i = 0; i < pages.length; i++) {
-				@@include('./src/includes/page.html',
-				`+(JSON.stringify(pages[i]))+`) }
-				<!-- Open Source Licenses screen -->
-				<section
-					id="openSourceLicenses"
-					class="row mx-auto d-none"
-					aria-hidden="true"
-				>
-					<div class="col mx-auto">
-						<h1 class="my-4 text-center">
-							<i class="bi bi-file-text" aria-hidden="true"></i
-							>&nbsp;Open Source Licenses
-						</h1>
-						<p>
-							The @@appName website (v@@version) is built using
-							the following open source libraries:
-						</p>
-						@@for (var i = 0; i < licenses.length; i++) {
-						@@include('./src/includes/license.html',
-						`+(JSON.stringify(licenses[i]))+`) }
-					</div>
-				</section>
-				<!-- Not found screen -->
+				</div>
+			</section>
+			<!-- Loop through each page -->
+			@@for (var i = 0; i < pages.length; i++) { @@include('./src/includes/page.html',
+				`+(JSON.stringify(pages[i]))+`) } <!-- Not found screen -->
 				<section id="404" class="row mx-auto d-none" aria-hidden="true">
 					<div class="container">
 						<div class="p-3 text-center">
-							<i
-								class="bi bi-bug large-icon d-block mx-auto mb-4"
-								aria-hidden="true"
-								role="img"
-							></i>
+							<i class="bi bi-bug large-icon d-block mx-auto mb-4" aria-hidden="true" role="img"></i>
 							<h1 class="display-5 fw-bold">Page not found</h1>
 							<div class="col-lg-6 mx-auto">
 								<p class="lead mb-4">
 									The page or link you're trying to get to
 									doesn't exist.
 								</p>
-								<div
-									class="d-grid gap-2 d-sm-flex justify-content-sm-center"
-								>
-									<a
-										class="btn btn-primary btn-lg px-4 gap-3"
-										href="https://withamscouts.org.uk"
-										>Go home</a
-									>
+								<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+									<a class="btn btn-primary btn-lg px-4 gap-3" href="@@appUrl">Go
+										home</a>
 								</div>
 							</div>
 						</div>
@@ -263,11 +133,7 @@
 				<section id="500" class="row mx-auto d-none" aria-hidden="true">
 					<div class="container">
 						<div class="p-3 text-center">
-							<i
-								class="bi bi-bug large-icon d-block mx-auto mb-4"
-								aria-hidden="true"
-								role="img"
-							></i>
+							<i class="bi bi-bug large-icon d-block mx-auto mb-4" aria-hidden="true" role="img"></i>
 							<h1 class="display-5 fw-bold">
 								An error has occurred
 							</h1>
@@ -277,72 +143,77 @@
 									website properly - please ensure you have
 									enabled JavaScript in your web browser.
 								</p>
-								<div
-									class="d-grid gap-2 d-sm-flex justify-content-sm-center"
-								>
-									<a
-										class="btn btn-primary btn-lg px-4 gap-3"
-										href="mailto:tom@firstwithamscouts.org.uk?Subject=&lsqb;withamscouts.org.uk&rsqb; Website fault"
-										>Report a problem</a
-									>&lsqb;
+								<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+									<a class="btn btn-primary btn-lg px-4 gap-3"
+										href="mailto:tom@firstwithamscouts.org.uk?Subject=&lsqb;withamscouts.org.uk&rsqb; Website fault">Report
+										a problem</a>&lsqb;
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
-			</main>
-			<!-- Page footer -->
-			<footer class="container my-5 text-muted border-top">
-				<div class="row pt-3">
-					<div class="col-md-10">
-						<p>
-							@@appName (version @@version) | All content &copy;
-							<a href="https://www.scouts.org.uk/"
-								>The Scout Association</a
-							>. All Rights Reserved.
-						</p>
-						<p>
-							Charity Numbers: 1044921 (1st Witham Scout Group)
-							and 1123146 (Maldon and East Essex District Scout
-							Council)
-						</p>
-						<p>
-							<a href="openSourceLicenses" data-navigo
-								>Open Source Licenses</a
-							>
-							|
-							<a
-								href="https://www.scouts.org.uk/about-us/strategy/"
-								>#SkillsForLife</a
-							>
-						</p>
+		</main>
+		<!-- Page footer -->
+		<footer class="container my-5 text-muted border-top">
+			<div class="row pt-3">
+				<div class="col-md-10">
+					<p>
+						@@appName (version @@version) | All content &copy;
+						<a href="https://www.scouts.org.uk/">The Scout Association</a>. All Rights Reserved.
+					</p>
+					<p>
+						Charity Numbers: 1044921 (1st Witham Scout Group)
+						and 1123146 (Maldon and East Essex District Scout
+						Council)
+					</p>
+					<p>
+						<a data-bs-toggle="modal" href="#openSourceLicenses">Open Source Licenses</a>
+						|
+						<a href="https://www.scouts.org.uk/about-us/strategy/">#SkillsForLife</a>
+					</p>
+				</div>
+				<div class="col-md-2 text-center">
+					<a href="@@appUrl">
+						<picture>
+							<source srcset="./img/logo/group.webp" type="image/webp" />
+							<source srcset="./img/logo/group.png" type="image/png" />
+							<img src="./img/logo/group.png" class="footer-img" alt="Witham Scouts logo" loading="lazy"
+								height="100" width="110" />
+						</picture>
+					</a>
+				</div>
+			</div>
+		</footer>
+		<!-- Modal for Open Source Licenses -->
+		<div class="modal fade" id="openSourceLicenses" tabindex="-1" aria-labelledby="openSourceLicensesLabel"
+			aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title" id="openSourceLicensesLabel">
+							Open Source Licenses
+						</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
-					<div class="col-md-2 text-center">
-						<a href="https://withamscouts.org.uk">
-							<picture>
-								<source
-									srcset="./img/logo/group.webp"
-									type="image/webp"
-								/>
-								<source
-									srcset="./img/logo/group.png"
-									type="image/png"
-								/>
-								<img
-									src="./img/logo/group.png"
-									class="footer-img"
-									alt="Witham Scouts logo"
-									loading="lazy"
-									height="100"
-									width="110"
-								/>
-							</picture>
-						</a>
+					<div class="modal-body">
+						<p>
+							The @@appName (v@@version) app is built by
+							@@author using the following open source
+							libraries:
+						</p>
+						@@for (var i = 0; i < licenses.length; i++) { @@include('./src/includes/license.html',
+							`+(JSON.stringify(licenses[i]))+`) } </div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-link" data-bs-dismiss="modal">
+									Close
+								</button>
+							</div>
 					</div>
 				</div>
-			</footer>
+			</div>
 		</div>
 		<script src="./js/browser-compat-@@version.min.js"></script>
 		<script src="./js/main-@@version.min.js"></script>
-	</body>
+</body>
+
 </html>

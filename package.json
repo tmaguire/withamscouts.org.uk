@@ -1,11 +1,11 @@
 {
 	"name": "withamscouts",
 	"appName": "Witham Scouts",
+	"appUrl": "https://withamscouts.org.uk",
 	"version": "4.0.11",
 	"description": "Website for the Witham Scout groups",
 	"scripts": {
 		"build": "npm run license-check && gulp",
-		"dev": "npm run license-check && gulp dev",
 		"license-check": "npx license-checker-rseidelsohn --relativeLicensePath --production --excludePrivatePackages --direct --json --customPath ./thirdparty-licenses-template.json --nopeer > thirdparty-licenses.json"
 	},
 	"repository": {

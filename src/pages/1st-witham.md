@@ -10,7 +10,7 @@
 <p>Beavers 6 to 8 year olds; Fridays 1800 to 1930hrs</p>
 <p>Cubs 8 to 10 1/2 years old; Wednesdays 1800 to 1930hrs</p>
 <p>Scouts 10 1/2 to 14 year olds; Thursdays 1900 to 2030hrs</p>
-<p>Older Scouts at 14 year olds have the option to move on to Explorer Scouts, locally or else where in the district.</p>
+<p>Older Scouts at 14 year olds have the option to move on to <a href="explorers" data-navigo="true">Explorer Scouts</a>, locally or else where in the district.</p>
 <p>At 14 years old members can also become Young Leaders assisting the section leaders at Beavers, Cubs, and Scouts. Many of these young leaders do this to gain experience and achievement towards their Duke of Edinburgh Award.</p>
 <p>All the sections plan their programs and activities along side the Scout Associations balances program criteria. Your young person will have a varied and exciting time joining the movement.</p>
 <p>Your young person may experience any of the following while progressing through Beavers, Cubs and Scouts; camping, fire lighting, knot tying, cooking, problem solving, tent pitching, ball games, archery, climbing, community

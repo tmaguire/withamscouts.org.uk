@@ -13,7 +13,9 @@ const htmlmin = require('gulp-html-minifier-terser');
 const {
 	version,
 	appName,
-	description
+	description,
+	appUrl,
+	author
 } = require('./package.json');
 const sass = require('gulp-sass')(require('sass'));
 const {
@@ -50,7 +52,7 @@ function bundledJs() {
 	return src([
 		'./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 		'./node_modules/navigo/lib/navigo.min.js',
-		'./src/js/script.min.js'
+		'./src/js/script.js'
 	])
 		.pipe(concat(`main-${version}.min.js`))
 		.pipe(uglify())
@@ -92,10 +94,12 @@ function sitePages() {
 				licenses,
 				appName,
 				description,
-				pages
+				pages,
+				appUrl,
+				author
 			},
 			filters: {
-				markdown: marked.parse
+				markdown: marked.options({ mangle: false, headerIds: false, headerPrefix: false }).parse
 			}
 		}))
 		.pipe(htmlmin({
@@ -114,11 +118,10 @@ function copyJson() {
 function browserCompat() {
 	return src([
 		'./node_modules/outdated-browser-rework/dist/outdated-browser-rework.min.js',
-		'./src/js/browser-compat.min.js'
+		'./src/js/browser-compat.js'
 	])
 		.pipe(concat(`browser-compat-${version}.min.js`))
 		.pipe(dest('dist/js/'));
 }
 
 exports.default = parallel(series(parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copyJson, browserCompat), sri));
-exports.dev = parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copyJson, browserCompat);
