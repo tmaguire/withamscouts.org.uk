@@ -1,8 +1,4 @@
-<picture>
-<source srcset="./img/logo/3rd-witham.webp" type="image/webp">
-<source srcset="./img/logo/3rd-witham.png" type="image/png">
 <img src="./img/logo/3rd-witham.png" class="img-fluid logo-img" alt="3rd Witham Scout Group logo" loading="lazy">
-</picture>
 <div class="row">
 <div class="col-sm-12">
 <p>3rd Witham (St Nicholas) Scout group is open to boys and girls aged between 4 and 14 regardless of faith.</p>

@@ -1,8 +1,4 @@
-<picture>
-<source srcset="./img/logo/witham-esu.webp" type="image/webp">
-<source srcset="./img/logo/witham-esu.png" type="image/png">
 <img src="./img/logo/witham-esu.png" class="img-fluid logo-img" alt="Witham Explorer Scout Unit logo" width="50%" loading="lazy">
-</picture>
 <div class="row">
 <div class="col-sm-12">
 <p>We welcome any person over the age of 14*, with or without a background in Scouting. Join us to gain skills for life. Camping, bowling, hammock sleeping, self defense, community volunteering, world travel, climbing, t-shirt printing,
