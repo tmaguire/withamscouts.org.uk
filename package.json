@@ -33,7 +33,7 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sri-hash": "^2.2.1",
 		"gulp-uglify": "^3.0.2",
-		"license-checker-rseidelsohn": "^4.2.8",
+		"license-checker-rseidelsohn": "^4.2.11",
 		"marked": "^11.0.0",
 		"sass": "^1.69.5"
 	}
