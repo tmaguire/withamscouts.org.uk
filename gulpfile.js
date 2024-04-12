@@ -26,13 +26,16 @@ const pages = require('./src/json/pages.json');
 function licensePrep() {
 	const licenses = require('./thirdparty-licenses.json');
 	const array = [];
+	let counter = 0;
 	Object.keys(licenses).forEach(key => {
+		counter++;
 		const license = licenses[key];
 		array.push({
 			name: license.name,
 			version: license.version,
 			repo: license.repository,
-			license: license.licenseText
+			license: (String(license.licenseFile).endsWith('LICENSE') || String(license.licenseFile).endsWith('LICENSE.md') || String(license.licenseFile).endsWith('LICENSE.txt')) ? license.licenseText : '',
+			counter
 		});
 	});
 	return array;
@@ -40,7 +43,7 @@ function licensePrep() {
 const licenses = licensePrep();
 
 function sri() {
-	return src('dist/*.html')
+	return src('dist/*.html', { encoding: false })
 		.pipe(sriHash({
 			algo: 'sha512',
 			relative: true
@@ -53,7 +56,7 @@ function bundledJs() {
 		'./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 		'./node_modules/navigo/lib/navigo.min.js',
 		'./src/js/script.js'
-	])
+	], { encoding: false })
 		.pipe(concat(`main-${version}.min.js`))
 		.pipe(uglify())
 		.pipe(dest('dist/js/'));
@@ -64,7 +67,7 @@ function bundledCss() {
 		'./src/css/style.scss',
 		'./node_modules/bootstrap-icons/font/bootstrap-icons.scss',
 		'./node_modules/outdated-browser-rework/dist/style.css'
-	])
+	], { encoding: false })
 		.pipe(concat(`bundle-${version}.min.css`))
 		.pipe(sass.sync({
 			outputStyle: 'compressed'
@@ -75,17 +78,17 @@ function bundledCss() {
 function copyImg() {
 	return src([
 		'./src/img/**/*'
-	])
+	], { encoding: false })
 		.pipe(dest('dist/img/'));
 }
 
 function copyIcons() {
-	return src('./node_modules/bootstrap-icons/font/fonts/*')
+	return src('./node_modules/bootstrap-icons/font/fonts/*', { encoding: false })
 		.pipe(dest('dist/css/fonts/'));
 }
 
 function sitePages() {
-	return src('./src/html/*.html')
+	return src('./src/html/*.html', { encoding: false })
 		.pipe(fileInclude({
 			prefix: '@@',
 			basepath: '@root',
@@ -111,7 +114,7 @@ function sitePages() {
 }
 
 function copyJson() {
-	return src('./src/json/*.json')
+	return src('./src/json/*.json', { encoding: false })
 		.pipe(dest('dist/'));
 }
 
@@ -119,7 +122,7 @@ function browserCompat() {
 	return src([
 		'./node_modules/outdated-browser-rework/dist/outdated-browser-rework.min.js',
 		'./src/js/browser-compat.js'
-	])
+	], { encoding: false })
 		.pipe(concat(`browser-compat-${version}.min.js`))
 		.pipe(dest('dist/js/'));
 }

@@ -1,2 +1,14 @@
-<h2><a href="@@repo">@@name - @@version</a></h2>
-<pre>@@license</pre>
+<div class="accordion-item">
+	<h2 class="accordion-header">
+		<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+			data-bs-target="#license-@@counter" aria-expanded="false" aria-controls="license-@@counter">
+			<strong>@@name - @@version</strong>
+		</button>
+	</h2>
+	<div id="license-@@counter" class="accordion-collapse collapse" data-bs-parent="#openSourceLicensesList">
+		<div class="accordion-body">
+			<a href="@@repo">@@repo</a>
+			<pre>@@license</pre>
+		</div>
+	</div>
+</div>
