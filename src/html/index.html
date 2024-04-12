@@ -158,7 +158,7 @@
 			<div class="row pt-3">
 				<div class="col-md-10">
 					<p>
-						@@appName (version @@version) | All content &copy;
+						@@appName Website (v@@version) | All content &copy;
 						<a href="https://www.scouts.org.uk/">The Scout Association</a>. All Rights Reserved.
 					</p>
 					<p>
@@ -184,34 +184,7 @@
 				</div>
 			</div>
 		</footer>
-		<!-- Modal for Open Source Licenses -->
-		<div class="modal fade" id="openSourceLicenses" tabindex="-1" aria-labelledby="openSourceLicensesLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title" id="openSourceLicensesLabel">
-							Open Source Licenses
-						</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<p>
-							The @@appName (v@@version) app is built by
-							@@author using the following open source
-							libraries:
-						</p>
-						@@for (var i = 0; i < licenses.length; i++) { @@include('./src/includes/license.html',
-							`+(JSON.stringify(licenses[i]))+`) } </div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-link" data-bs-dismiss="modal">
-									Close
-								</button>
-							</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		@@include('./src/includes/license-modal.html')
 		<script src="./js/browser-compat-@@version.min.js"></script>
 		<script src="./js/main-@@version.min.js"></script>
 </body>

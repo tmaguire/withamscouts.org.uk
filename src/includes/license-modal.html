@@ -1,0 +1,29 @@
+<!-- Modal for Open Source Licenses -->
+<div class="modal fade" id="openSourceLicenses" tabindex="-1" aria-labelledby="openSourceLicensesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="openSourceLicensesLabel">
+                    Open Source Licenses
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    The @@appName website (v@@version) is built by
+                    @@author using the following open source
+                    libraries:
+                </p>
+                <div class="accordion" id="openSourceLicensesList">
+                    @@for (var i = 0; i < licenses.length; i++) { @@include('./src/includes/license.html',
+                        `+(JSON.stringify(licenses[i]))+`) } </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

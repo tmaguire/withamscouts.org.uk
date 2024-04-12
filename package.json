@@ -6,7 +6,7 @@
 	"description": "Website for the Witham Scout groups",
 	"scripts": {
 		"build": "npm run license-check && gulp",
-		"license-check": "npx license-checker-rseidelsohn --relativeLicensePath --production --excludePrivatePackages --direct --json --customPath ./thirdparty-licenses-template.json --nopeer > thirdparty-licenses.json"
+		"license-check": "npx license-checker-rseidelsohn --json --relativeLicensePath --production --excludePrivatePackages --direct 0 --customPath ./thirdparty-license-types.json --nopeer > thirdparty-licenses.json"
 	},
 	"repository": {
 		"type": "git",
