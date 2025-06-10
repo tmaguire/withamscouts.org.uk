@@ -69,9 +69,10 @@ function bundledCss() {
 		'./node_modules/outdated-browser-rework/dist/style.css'
 	], { encoding: false })
 		.pipe(concat(`bundle-${version}.min.css`))
-		.pipe(sass.sync({
-			outputStyle: 'compressed'
-		}).on('error', sass.logError))
+		.pipe(sass({
+			style: 'compressed',
+			quietDeps: true
+		}))
 		.pipe(dest('dist/css/'));
 }
 

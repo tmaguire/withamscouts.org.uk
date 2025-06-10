@@ -20,21 +20,21 @@
 	"homepage": "https://github.com/tmaguire/withamscouts.org.uk#readme",
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
-		"bootstrap": "^5.3.3",
-		"bootstrap-icons": "^1.11.3",
+		"bootstrap": "^5.3.6",
+		"bootstrap-icons": "^1.13.1",
 		"navigo": "^8.11.1",
 		"outdated-browser-rework": "^3.0.1"
 	},
 	"devDependencies": {
-		"gulp": "^5.0.0",
+		"gulp": "^5.0.1",
 		"gulp-concat": "^2.6.1",
 		"gulp-file-include": "^2.3.0",
 		"gulp-html-minifier-terser": "^7.1.0",
-		"gulp-sass": "^5.1.0",
+		"gulp-sass": "^6.0.1",
 		"gulp-sri-hash": "^2.2.1",
 		"gulp-uglify": "^3.0.2",
-		"license-checker-rseidelsohn": "^4.3.0",
-		"marked": "^12.0.1",
-		"sass": "^1.75.0"
+		"license-checker-rseidelsohn": "^4.4.2",
+		"marked": "^15.0.12",
+		"sass": "^1.89.2"
 	}
 }
