@@ -51,6 +51,12 @@ $secondary: #003982;
 // Utilities
 @import '../../node_modules/bootstrap/scss/utilities/api';
 
+// Update the import directory to point to it‘s location within node_modules
+$bootstrap-icons-font-dir: 'fonts';
+
+// Import the Sass files as usual
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+
 // Custom styles
 html {
 	scroll-behavior: smooth;

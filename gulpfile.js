@@ -63,11 +63,7 @@ function bundledJs() {
 }
 
 function bundledCss() {
-	return src([
-		'./src/css/style.scss',
-		'./node_modules/bootstrap-icons/font/bootstrap-icons.scss',
-		'./node_modules/outdated-browser-rework/dist/style.css'
-	], { encoding: false })
+	return src('./src/css/style.scss', { encoding: false })
 		.pipe(concat(`bundle-${version}.min.css`))
 		.pipe(sass({
 			style: 'compressed',
@@ -119,13 +115,4 @@ function copyJson() {
 		.pipe(dest('dist/'));
 }
 
-function browserCompat() {
-	return src([
-		'./node_modules/outdated-browser-rework/dist/outdated-browser-rework.min.js',
-		'./src/js/browser-compat.js'
-	], { encoding: false })
-		.pipe(concat(`browser-compat-${version}.min.js`))
-		.pipe(dest('dist/js/'));
-}
-
-exports.default = parallel(series(parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copyJson, browserCompat), sri));
+exports.default = parallel(series(parallel(bundledJs, bundledCss, sitePages, copyIcons, copyImg, copyJson), sri));

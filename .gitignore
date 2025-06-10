@@ -112,3 +112,6 @@ thirdparty-licenses.json
 
 # Local Netlify folder
 .netlify
+
+# MacOS BS
+.DS_Store

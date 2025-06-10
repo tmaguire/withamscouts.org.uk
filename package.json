@@ -22,8 +22,7 @@
 		"@popperjs/core": "^2.11.8",
 		"bootstrap": "^5.3.6",
 		"bootstrap-icons": "^1.13.1",
-		"navigo": "^8.11.1",
-		"outdated-browser-rework": "^3.0.1"
+		"navigo": "^8.11.1"
 	},
 	"devDependencies": {
 		"gulp": "^5.0.1",
