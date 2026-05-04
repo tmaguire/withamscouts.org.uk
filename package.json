@@ -2,7 +2,7 @@
 	"name": "withamscouts",
 	"appName": "Witham Scouts",
 	"appUrl": "https://withamscouts.org.uk",
-	"version": "8.0.2",
+	"version": "8.0.3",
 	"description": "Website for the Witham Scout groups",
 	"scripts": {
 		"build": "npm run license-check && gulp",
